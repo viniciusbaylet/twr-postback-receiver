@@ -6,6 +6,9 @@ export class SaleController {
 
     constructor() {
         this.saleService = new SaleService();
+
+        this.receivedWebhook = this.receivedWebhook.bind(this);
+        this.getReport = this.getReport.bind(this);
     }
 
     async receivedWebhook(req: Request, res: Response) {
