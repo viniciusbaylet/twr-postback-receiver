@@ -9,7 +9,7 @@ export class SaleRepository {
                 customerEmail: data.customerEmail,
                 amount: data.amount,
                 currency: data.currency || 'BRL',
-                status: data.status
+                status: data.status ?? 'pending'
             }
         });
     }
