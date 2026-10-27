@@ -6,6 +6,8 @@
   "scripts": {
     "predev": "prisma generate",
     "dev": "tsx src/server.ts",
+    "build": "prisma generate && tsc",
+    "start": "node dist/server.js",
     "postinstall": "prisma skills sync || exit 0"
   },
   "repository": {
